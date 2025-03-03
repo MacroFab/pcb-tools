@@ -455,10 +455,10 @@ class RepeatHoleStmt(ExcellonStatement):
         count = int(stmt['rcount'])
         xdelta = (parse_gerber_value(stmt['xdelta'], settings.format,
                                      settings.zero_suppression)
-                  if stmt['xdelta'] is not '' else None)
+                  if stmt['xdelta'] != '' else None)
         ydelta = (parse_gerber_value(stmt['ydelta'], settings.format,
                                      settings.zero_suppression)
-                  if stmt['ydelta'] is not '' else None)
+                  if stmt['ydelta'] != '' else None)
         c = cls(count, xdelta, ydelta, **kwargs)
         c.units = settings.units
         return c
@@ -606,10 +606,10 @@ class EndOfProgramStmt(ExcellonStatement):
         stmt = match.groupdict()
         x = (parse_gerber_value(stmt['x'], settings.format,
                                 settings.zero_suppression)
-             if stmt['x'] is not '' else None)
+             if stmt['x'] != '' else None)
         y = (parse_gerber_value(stmt['y'], settings.format,
                                 settings.zero_suppression)
-             if stmt['y'] is not '' else None)
+             if stmt['y'] != '' else None)
         c = cls(x, y, **kwargs)
         c.units = settings.units
         return c
