@@ -8,12 +8,11 @@ Tools to handle Gerber and Excellon files in Python.
 In the pipeline column output the status of a certain step in github actions workflow
 | Version | Supported          | Notes |
 | ------- | ------------------ | -------- |
-| 3.7.x   | [![Python 3.7](https://github.com/MacroFab/pcb-tools/actions/workflows/python37.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python37.yaml)  | End of Life |
-| 3.8.x   | [![Python 3.8](https://github.com/MacroFab/pcb-tools/actions/workflows/python38.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python38.yaml) |              | 
 | 3.9.x   | [![Python 3.9](https://github.com/MacroFab/pcb-tools/actions/workflows/python39.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python39.yaml) | |
 | 3.10.x  | [![Python 3.10](https://github.com/MacroFab/pcb-tools/actions/workflows/python310.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python310.yaml) | |
 | 3.11.x  | [![Python 3.11](https://github.com/MacroFab/pcb-tools/actions/workflows/python311.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python311.yaml) | |
 | 3.12.x  | [![Python 3.12](https://github.com/MacroFab/pcb-tools/actions/workflows/python312.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python312.yaml) | |
+| 3.13.x  | [![Python 3.13](https://github.com/MacroFab/pcb-tools/actions/workflows/python313.yaml/badge.svg)](https://github.com/MacroFab/pcb-tools/actions/workflows/python313.yaml) | |
 
 Usage Example:
 ---------------

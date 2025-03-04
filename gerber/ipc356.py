@@ -382,8 +382,8 @@ class IPC356_Outline(object):
         coord_strings = line.strip().split()[1:]
         for coord in coord_strings:
             coord_dict = _COORD.match(coord).groupdict()
-            x = int(coord_dict['x']) if coord_dict['x'] is not '' else x
-            y = int(coord_dict['y']) if coord_dict['y'] is not '' else y
+            x = int(coord_dict['x']) if coord_dict['x'] != '' else x
+            y = int(coord_dict['y']) if coord_dict['y'] != '' else y
             points.append((x * scale, y * scale))
         return cls(type, points)
 
@@ -412,9 +412,9 @@ class IPC356_Conductor(object):
         x = 0
         y = 0
         x = int(aperture_dict['x']) * \
-            scale if aperture_dict['x'] is not '' else None
+            scale if aperture_dict['x'] != '' else None
         y = int(aperture_dict['y']) * \
-            scale if aperture_dict['y'] is not '' else None
+            scale if aperture_dict['y'] != '' else None
         aperture = (x, y)
 
         # Parse out conductor shapes
@@ -428,8 +428,8 @@ class IPC356_Conductor(object):
             coords = rshape.split()
             for coord in coords:
                 coord_dict = _COORD.match(coord).groupdict()
-                x = int(coord_dict['x']) if coord_dict['x'] is not '' else x
-                y = int(coord_dict['y']) if coord_dict['y'] is not '' else y
+                x = int(coord_dict['x']) if coord_dict['x'] != '' else x
+                y = int(coord_dict['y']) if coord_dict['y'] != '' else y
                 shape.append((x * scale, y * scale))
             shapes.append(tuple(shape))
         return cls(net_name, layer, aperture, tuple(shapes))
