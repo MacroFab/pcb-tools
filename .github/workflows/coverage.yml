@@ -14,7 +14,7 @@ jobs:
       pull-requests: write
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python
         id: setup-python
@@ -38,7 +38,7 @@ jobs:
           GITHUB_PR_RUN_ID: ${{ github.run_id }}
 
       - name: Store Pull Request comment to be posted
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: steps.coverage_comment.outputs.COMMENT_FILE_WRITTEN == 'true'
         with:
           name: python-coverage-comment-action
